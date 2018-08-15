@@ -1,7 +1,9 @@
 ---
 title: {{ title }}
 date: {{ date }}
-categories: notes
-tags: 
-toc: true 
+categories:
+  - notes
+tags:
+  - note
+toc: true
 ---
