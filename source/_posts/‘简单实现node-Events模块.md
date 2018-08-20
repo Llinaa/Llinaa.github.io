@@ -1,14 +1,10 @@
 ---
-title: node_events
-categories:
-  - notes
+title: 简单实现node Events模块
+date: 2018-08-20 11:15:22
 tags:
   - note
-toc: true
-date: 2018-08-20 10:34:58
 ---
 
-### 简单实现Node的Events模块
 > 观察者模式定义对象间的一种一对多依赖关系，使得当每一个被依赖对象状态发生改变时，其相关依赖对象都得到通知并自动更新, node中的Events模块就是通过观察者模式来实现的：
 ```
 var events = require('events');
