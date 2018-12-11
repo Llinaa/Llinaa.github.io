@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://llinaa.github.io">
-  <title>Javascripts运行原理解析 | lina&#39;s blog</title>
+  <title>CSS in JS | lina&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先介绍几个相关概念  JS引擎 JS Engine（JS引擎） Runtime（运行上下文） Call Stack (调用栈) Event Loop（事件循环） Callback (回调)  JS引擎JS引擎是对JS代码进行词法、语法分析，通过编译器将代码编译成可执行的机器代码(Java中的JVM 虚拟机一样)，Chrome和node均采用V8引擎JS 引擎中也存在堆和栈  堆 存放对象 栈 存放">
-<meta name="keywords" content="note">
+  <meta name="description" content="CSS in JS，顾名思义，就是在JavaScript 里面写CSS以前CSS的缺点：1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascripts运行原理解析">
-<meta property="og:url" content="https://llinaa.github.io/notes/cjpj5293w0005vgt4yonkum7q.html">
+<meta property="og:title" content="CSS in JS">
+<meta property="og:url" content="https://llinaa.github.io/uncategorized/cjpjkb1xq0002aht4551d1a1s.html">
 <meta property="og:site_name" content="lina&#39;s blog">
-<meta property="og:description" content="先介绍几个相关概念  JS引擎 JS Engine（JS引擎） Runtime（运行上下文） Call Stack (调用栈) Event Loop（事件循环） Callback (回调)  JS引擎JS引擎是对JS代码进行词法、语法分析，通过编译器将代码编译成可执行的机器代码(Java中的JVM 虚拟机一样)，Chrome和node均采用V8引擎JS 引擎中也存在堆和栈  堆 存放对象 栈 存放">
+<meta property="og:description" content="CSS in JS，顾名思义，就是在JavaScript 里面写CSS以前CSS的缺点：1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://llinaa.github.io/assets/img/event_loop2.jpg">
-<meta property="og:image" content="https://llinaa.github.io/assets/img/event_loop.jpg">
-<meta property="og:updated_time" content="2018-12-11T02:11:16.432Z">
+<meta property="og:updated_time" content="2018-12-11T09:36:13.633Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascripts运行原理解析">
-<meta name="twitter:description" content="先介绍几个相关概念  JS引擎 JS Engine（JS引擎） Runtime（运行上下文） Call Stack (调用栈) Event Loop（事件循环） Callback (回调)  JS引擎JS引擎是对JS代码进行词法、语法分析，通过编译器将代码编译成可执行的机器代码(Java中的JVM 虚拟机一样)，Chrome和node均采用V8引擎JS 引擎中也存在堆和栈  堆 存放对象 栈 存放">
-<meta name="twitter:image" content="https://llinaa.github.io/assets/img/event_loop2.jpg">
+<meta name="twitter:title" content="CSS in JS">
+<meta name="twitter:description" content="CSS in JS，顾名思义，就是在JavaScript 里面写CSS以前CSS的缺点：1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为">
   
     <link rel="alternative" href="/atom.xml" title="lina&#39;s blog" type="application/atom+xml">
   
@@ -162,43 +158,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Javascripts运行原理解析" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-CSS-in-JS" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Javascripts运行原理解析
+      CSS in JS
     </h1>
   
 
         
-        <a href="/notes/cjpj5293w0005vgt4yonkum7q.html" class="archive-article-date">
-  	<time datetime="2018-08-29T06:16:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-29</time>
+        <a href="/uncategorized/cjpjkb1xq0002aht4551d1a1s.html" class="archive-article-date">
+  	<time datetime="2018-12-11T09:14:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>先介绍几个相关概念</p>
-<ul>
-<li>JS引擎</li>
-<li>JS Engine（JS引擎）</li>
-<li>Runtime（运行上下文）</li>
-<li>Call Stack (调用栈)</li>
-<li>Event Loop（事件循环）</li>
-<li>Callback (回调)</li>
-</ul>
-<h3 id="JS引擎"><a href="#JS引擎" class="headerlink" title="JS引擎"></a>JS引擎</h3><p>JS引擎是对JS代码进行词法、语法分析，通过编译器将代码编译成可执行的机器代码(Java中的JVM 虚拟机一样)，Chrome和node均采用V8引擎<br>JS 引擎中也存在堆和栈</p>
-<ul>
-<li>堆 存放对象</li>
-<li>栈 存放方法和基础数据类型 、正在执行的任务<h3 id="Runtime（运行上下文）"><a href="#Runtime（运行上下文）" class="headerlink" title="Runtime（运行上下文）"></a>Runtime（运行上下文）</h3>JS在浏览器环境中运行时，BOM和DOM对象提供了很多相关外部接口（这些接口不是V8引擎提供的），供JS运行时调用，以及JS的事件循环(Event Loop)和事件队列(Callback Queue)，把这些称为RunTime。在Node.js中，可以把Node的各种库提供的API称为RunTime<br><img src="/assets/img/event_loop2.jpg" alt="Alt text"><h3 id="Call-Stack-调用栈"><a href="#Call-Stack-调用栈" class="headerlink" title="Call Stack (调用栈)"></a>Call Stack (调用栈)</h3></li>
-<li>全局执行环境</li>
-<li>函数执行环境</li>
-<li>Eval 执行环境<br>当JS代码第一次被加载时，会创建一个全局执行环境（windows对象），当调用一个函数时，会创建一个函数执行环境<h3 id="Event-Loop（事件循环）"><a href="#Event-Loop（事件循环）" class="headerlink" title="Event Loop（事件循环）"></a>Event Loop（事件循环）</h3>Event Loop只做一件事情，负责监听Call Stack和Callback Queue。主线程空闲（调用栈空）时，当Call Stack里面的调用栈运行完变成空了，Event Loop就把Callback Queue里面的第一条事件(其实就是回调函数)放到调用栈中并执行它，后续不断循环执行这个操作。<br><img src="/assets/img/event_loop.jpg" alt="Alt text"></li>
-</ul>
+        <hr>
+<h3 id="CSS-in-JS，顾名思义，就是在JavaScript-里面写CSS"><a href="#CSS-in-JS，顾名思义，就是在JavaScript-里面写CSS" class="headerlink" title="CSS in JS，顾名思义，就是在JavaScript 里面写CSS"></a>CSS in JS，顾名思义，就是在JavaScript 里面写CSS</h3><p>以前CSS的缺点：<br>1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。<br>2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。<br>3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为怕互相影响，不敢重用。<br>4、代码冗余：由于样式重用的困难性等问题，导致代码冗余。<br>出现的解决方案：<br>1、SASS, LESS - 提供了变量、简单函数、运算、继承等，扩展性、重用性都有了很大的提升，解决了一些样式重用冗余的问题，但是对于命名混乱问题的效果不大。<br>2、BEM (.block__element–modifier)：比较流行的class命名规则，部分解决了命名混乱和全局污染的问题，但class定义起来还是不太方便，比较冗长，而且和第三方库的命名还是有可能冲突。<br>3、<br>CSS Modules：模块化CSS，将CSS文件以模块的形式引入到JavaScript里，基本上解决了全局污染、命名混乱、样式重用和冗余的问题，但CSS有嵌套结构的限制（只能一层），也无法方便的在CSS和JavaScript之间共享变量。</p>
 
       
 
@@ -228,29 +209,7 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -300,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://llinaa.github.io/notes/cjpj5293w0005vgt4yonkum7q.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://llinaa.github.io/uncategorized/cjpjkb1xq0002aht4551d1a1s.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -314,18 +273,18 @@
   
 <nav id="article-nav">
   
-    <a href="/notes/cjpj52942000avgt4dvv6jkow.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/uncategorized/cjpjkb1xi0000aht49pasn5j0.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          asm.js
+          CSS Modules
         
       </div>
     </a>
   
   
-    <a href="/notes/cjpj52944000cvgt49c5xz9ae.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js原型</div>
+    <a href="/uncategorized/cjpjkb1ya000paht4pzvshlq1.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设备像素、独立像素和css像素</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -344,19 +303,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JS引擎"><span class="toc-number">1.</span> <span class="toc-text">JS引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Runtime（运行上下文）"><span class="toc-number">2.</span> <span class="toc-text">Runtime（运行上下文）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Call-Stack-调用栈"><span class="toc-number">3.</span> <span class="toc-text">Call Stack (调用栈)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Event-Loop（事件循环）"><span class="toc-number">4.</span> <span class="toc-text">Event Loop（事件循环）</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>

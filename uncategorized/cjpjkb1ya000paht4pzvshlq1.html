@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://llinaa.github.io">
-  <title>响应式设计 | lina&#39;s blog</title>
+  <title>设备像素、独立像素和css像素 | lina&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="三种技术：弹性布局、弹性图片、媒体查询 浏览器支持：先写一个较轻量的代码架构，然后根据所需的体验针对能力更强的浏览器进行扩展，包括视觉和功能（渐进增强） 浏览器特性查询：https://caniuse.com  视口：浏览器中用于呈现网页的区域，视口通常并不等于屏幕大小，特别是可以缩放浏览器窗口的情况下。1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;q">
-<meta name="keywords" content="note">
+  <meta name="description" content="最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解： 1、像素（1）设备像素 （2）设备独立像素 （3）CSS像素 设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位   1、分辨率：通常使用分辨率来描述设备像素，例如19201080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334750">
 <meta property="og:type" content="article">
-<meta property="og:title" content="响应式设计">
-<meta property="og:url" content="https://llinaa.github.io/notes/cjpj5r1vm000h1nt4yzceug7y.html">
+<meta property="og:title" content="设备像素、独立像素和css像素">
+<meta property="og:url" content="https://llinaa.github.io/uncategorized/cjpjkb1ya000paht4pzvshlq1.html">
 <meta property="og:site_name" content="lina&#39;s blog">
-<meta property="og:description" content="三种技术：弹性布局、弹性图片、媒体查询 浏览器支持：先写一个较轻量的代码架构，然后根据所需的体验针对能力更强的浏览器进行扩展，包括视觉和功能（渐进增强） 浏览器特性查询：https://caniuse.com  视口：浏览器中用于呈现网页的区域，视口通常并不等于屏幕大小，特别是可以缩放浏览器窗口的情况下。1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;q">
+<meta property="og:description" content="最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解： 1、像素（1）设备像素 （2）设备独立像素 （3）CSS像素 设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位   1、分辨率：通常使用分辨率来描述设备像素，例如19201080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334750">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-11T02:11:16.434Z">
+<meta property="og:image" content="https://llinaa.github.io/assets/img/ppi.png">
+<meta property="og:image" content="https://llinaa.github.io/assets/img/dpi.png">
+<meta property="og:updated_time" content="2018-12-11T04:01:19.082Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="响应式设计">
-<meta name="twitter:description" content="三种技术：弹性布局、弹性图片、媒体查询 浏览器支持：先写一个较轻量的代码架构，然后根据所需的体验针对能力更强的浏览器进行扩展，包括视觉和功能（渐进增强） 浏览器特性查询：https://caniuse.com  视口：浏览器中用于呈现网页的区域，视口通常并不等于屏幕大小，特别是可以缩放浏览器窗口的情况下。1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;q">
+<meta name="twitter:title" content="设备像素、独立像素和css像素">
+<meta name="twitter:description" content="最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解： 1、像素（1）设备像素 （2）设备独立像素 （3）CSS像素 设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位   1、分辨率：通常使用分辨率来描述设备像素，例如19201080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334750">
+<meta name="twitter:image" content="https://llinaa.github.io/assets/img/ppi.png">
   
     <link rel="alternative" href="/atom.xml" title="lina&#39;s blog" type="application/atom+xml">
   
@@ -159,67 +161,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-响应式设计" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-设备像素、独立像素和css像素" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      响应式设计
+      设备像素、独立像素和css像素
     </h1>
   
 
         
-        <a href="/notes/cjpj5r1vm000h1nt4yzceug7y.html" class="archive-article-date">
-  	<time datetime="2018-09-26T12:35:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-26</time>
+        <a href="/uncategorized/cjpjkb1ya000paht4pzvshlq1.html" class="archive-article-date">
+  	<time datetime="2018-12-11T02:57:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>三种技术：弹性布局、弹性图片、媒体查询</li>
-<li>浏览器支持：先写一个较轻量的代码架构，然后根据所需的体验针对能力更强的浏览器进行扩展，包括视觉和功能（渐进增强）</li>
-<li>浏览器特性查询：<a href="https://caniuse.com" target="_blank" rel="noopener">https://caniuse.com</a></li>
-</ul>
-<p>视口：浏览器中用于呈现网页的区域，视口通常并不等于屏幕大小，特别是可以缩放浏览器窗口的情况下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt; //按照设备的宽度来渲染网页</span><br></pre></td></tr></table></figure></p>
-<p>图片：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">img &#123;</span><br><span class="line">	max-width：100%</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="媒体查询："><a href="#媒体查询：" class="headerlink" title="媒体查询："></a>媒体查询：</h3><h5 id="css"><a href="#css" class="headerlink" title="css"></a>css</h5><ul>
-<li><p>在link标签中使用媒体查询</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;test.css&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>@import与媒体查询</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import url(&quot;phone.css&quot;) screen and (max-width:360px)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在css中使用媒体查询</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media screen and (max-device-width:360px) &#123;</span><br><span class="line">	h1 &#123;color:green&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="媒体查询可以测试的特性："><a href="#媒体查询可以测试的特性：" class="headerlink" title="媒体查询可以测试的特性："></a>媒体查询可以测试的特性：</h3><p>width、height、device-width、device-height、orientation（设备方向是水平还是垂直）、aspect-ratio(视口的宽高比)、color、resolution（分辨率）、scan等</p>
-<h3 id="弹性布局与响应式图片"><a href="#弹性布局与响应式图片" class="headerlink" title="弹性布局与响应式图片"></a>弹性布局与响应式图片</h3><ul>
-<li>将固定像素大小转换为弹性比例大小<br> 结果=目标/上下文  元素的大小除以元素所在容器的大小</li>
-<li>Flexbox布局<br> 关键字：方向、次序、对齐、弹性<pre><code>容器、轴
-</code></pre><h6 id="容器："><a href="#容器：" class="headerlink" title="容器："></a>容器：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">flex-direction</span><br><span class="line">flex-wrap</span><br><span class="line">flex-flow</span><br><span class="line">justify-content</span><br><span class="line">align-item</span><br><span class="line">align-content</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h6 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">order</span><br><span class="line">flex-shrink</span><br><span class="line">flex-basis</span><br><span class="line">align-item</span><br><span class="line">align-self</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>响应式图片<br>通过srcset切换分辨率</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;small.jpg&quot; srcset=&quot;medium.jpg 1.5x,big.jpg 2x&quot; alt=&quot;test&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>picture元素</p>
-</li>
-</ul>
-<pre><code>&lt;picture&gt;
-    &lt;source media=&quot;(min-width:30em)&quot; srcset=&quot;cake.jpg&quot;&gt;
-    &lt;source media=&quot;(min-width:50em)&quot; srcset=&quot;shop.jpg&quot;&gt;
-    &lt;img src=&quot;scones.jpg&quot; alt=&quot;test&quot;&gt;
-&lt;/picture&gt;
-</code></pre><h3 id="HTML5与响应式Web设计"><a href="#HTML5与响应式Web设计" class="headerlink" title="HTML5与响应式Web设计"></a>HTML5与响应式Web设计</h3><ul>
-<li>h5的新语义元素(结构化元素)<br>main<br>section<br>nav<br>article<br>aside<br>figure<br>ficaption<br>details<br>summary<br>header<br>footer<br>address<br>video<br>audio</li>
-</ul>
-<h3 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a>CSS3新特性</h3><p>CSS响应式多列布局：<br>img {<br>    column-width<br>    column-count<br>    column-gap<br>    column-rule<br>}<br>断字：<br>word-wrap:break-word<br>截断文本：<br>white-space：no-wrap</p>
+        <p>最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解：</p>
+<h3 id="1、像素"><a href="#1、像素" class="headerlink" title="1、像素"></a>1、像素</h3><pre><code>（1）设备像素
+（2）设备独立像素
+（3）CSS像素
+</code></pre><h3 id="设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位"><a href="#设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位" class="headerlink" title="设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位"></a>设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位</h3><p>   1、分辨率：通常使用分辨率来描述设备像素，例如1920<em>1080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334</em>750<br>   2、屏幕尺寸：购买电视或者手机等设备的显示器都有一个屏幕尺寸参数，比如55英寸，它既不是显示器的宽度也不是高度，而是对角线的长度，图示如下：<br><img src="/assets/img/ppi.png" alt="Alt text"><br>   3、屏幕像素密度：简称ppi,单位是dpi，ppi越高图像会更加清晰<br><img src="/assets/img/dpi.png" alt="Alt text"><br>对角线分辨率除以屏幕尺寸：2203/5≈440dpi</p>
+<h3 id="设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，"><a href="#设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，" class="headerlink" title="设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，"></a>设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，</h3><p>不可能再一个设备像素对应一个设备独立像素了，因为这样东西会被缩小，看不清，现在的高分辨率屏幕会用多个设备像素来显示一个设备独立像素。<br>一台设备上的设备独立像素和设备像素一样，都是固定的。设备中有相关系统把设备独立像素或者CSS像素转化为物理像素。<br>可通过window.screen.width、　window.screen.height 获取设备对像素，例如iphone6 的设备独立像素为 375*667</p>
+<h3 id="设备像素比（DPR）：物理像素-设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上）-例如iphone6-的DPR为2"><a href="#设备像素比（DPR）：物理像素-设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上）-例如iphone6-的DPR为2" class="headerlink" title="设备像素比（DPR）：物理像素/设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上） 例如iphone6 的DPR为2"></a>设备像素比（DPR）：物理像素/设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上） 例如iphone6 的DPR为2</h3><h3 id="CSS像素：相对单位，相对不同屏幕，其实际像素不同"><a href="#CSS像素：相对单位，相对不同屏幕，其实际像素不同" class="headerlink" title="CSS像素：相对单位，相对不同屏幕，其实际像素不同"></a>CSS像素：相对单位，相对不同屏幕，其实际像素不同</h3><h3 id="viewport-是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。"><a href="#viewport-是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。" class="headerlink" title="viewport : 是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。"></a>viewport : 是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。</h3><p>一般来说PC端端viewport跟浏览器的大小是一致的，移动端的viewport 宽度大多都是980px，可见移动端的viewport比真实的移动端屏幕大多了。<br>让一个设备独立像素点对应一个CSS像素点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -249,29 +217,7 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -321,7 +267,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://llinaa.github.io/notes/cjpj5r1vm000h1nt4yzceug7y.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://llinaa.github.io/uncategorized/cjpjkb1ya000paht4pzvshlq1.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -335,18 +281,18 @@
   
 <nav id="article-nav">
   
-    <a href="/notes/cjpj5r1vx000q1nt4d8rxsv33.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/uncategorized/cjpjkb1xq0002aht4551d1a1s.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          react setState
+          CSS in JS
         
       </div>
     </a>
   
   
-    <a href="/notes/cjpj5r1uz00001nt46lejwaxg.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Emscripten编译器安装教程</div>
+    <a href="/uncategorized/cjpjkb1yd000vaht4vitcc3zd.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小程序笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -365,19 +311,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#媒体查询："><span class="toc-number">1.</span> <span class="toc-text">媒体查询：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#css"><span class="toc-number">1.0.1.</span> <span class="toc-text">css</span></a></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#媒体查询可以测试的特性："><span class="toc-number">2.</span> <span class="toc-text">媒体查询可以测试的特性：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#弹性布局与响应式图片"><span class="toc-number">3.</span> <span class="toc-text">弹性布局与响应式图片</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#容器："><span class="toc-number">3.0.0.1.</span> <span class="toc-text">容器：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#元素"><span class="toc-number">3.0.0.2.</span> <span class="toc-text">元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5与响应式Web设计"><span class="toc-number">4.</span> <span class="toc-text">HTML5与响应式Web设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3新特性"><span class="toc-number">5.</span> <span class="toc-text">CSS3新特性</span></a></li>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
