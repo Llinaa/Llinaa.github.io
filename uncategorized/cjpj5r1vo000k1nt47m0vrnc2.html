@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://llinaa.github.io">
-  <title>Archives: 2018/12 | lina&#39;s blog</title>
+  <title>设备像素、独立像素和css像素 | lina&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lina&#39;s blog">
-<meta property="og:url" content="https://llinaa.github.io/archives/2018/12/index.html">
+  <meta name="description" content="最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解： 1、像素（1）设备像素 （2）设备独立像素 （3）CSS像素 设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位   1、分辨率：通常使用分辨率来描述设备像素，例如19201080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334750">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设备像素、独立像素和css像素">
+<meta property="og:url" content="https://llinaa.github.io/uncategorized/cjpj5r1vo000k1nt47m0vrnc2.html">
 <meta property="og:site_name" content="lina&#39;s blog">
-<meta property="og:description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
+<meta property="og:description" content="最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解： 1、像素（1）设备像素 （2）设备独立像素 （3）CSS像素 设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位   1、分辨率：通常使用分辨率来描述设备像素，例如19201080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334750">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://llinaa.github.io/assets/img/ppi.png">
+<meta property="og:image" content="https://llinaa.github.io/assets/img/dpi.png">
+<meta property="og:updated_time" content="2018-12-11T03:52:54.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lina&#39;s blog">
-<meta name="twitter:description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
+<meta name="twitter:title" content="设备像素、独立像素和css像素">
+<meta name="twitter:description" content="最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解： 1、像素（1）设备像素 （2）设备独立像素 （3）CSS像素 设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位   1、分辨率：通常使用分辨率来描述设备像素，例如19201080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334750">
+<meta name="twitter:image" content="https://llinaa.github.io/assets/img/ppi.png">
   
     <link rel="alternative" href="/atom.xml" title="lina&#39;s blog" type="application/atom+xml">
   
@@ -157,76 +161,162 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-设备像素、独立像素和css像素" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      设备像素、独立像素和css像素
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/uncategorized/cjpj5r1vo000k1nt47m0vrnc2.html" class="archive-article-date">
+
+        
+        <a href="/uncategorized/cjpj5r1vo000k1nt47m0vrnc2.html" class="archive-article-date">
   	<time datetime="2018-12-11T02:57:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/uncategorized/cjpj5r1vo000k1nt47m0vrnc2.html">设备像素、独立像素和css像素</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解：</p>
+<h3 id="1、像素"><a href="#1、像素" class="headerlink" title="1、像素"></a>1、像素</h3><pre><code>（1）设备像素
+（2）设备独立像素
+（3）CSS像素
+</code></pre><h3 id="设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位"><a href="#设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位" class="headerlink" title="设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位"></a>设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位</h3><p>   1、分辨率：通常使用分辨率来描述设备像素，例如1920<em>1080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334</em>750<br>   2、屏幕尺寸：购买电视或者手机等设备的显示器都有一个屏幕尺寸参数，比如55英寸，它既不是显示器的宽度也不是高度，而是对角线的长度，图示如下：<br><img src="/assets/img/ppi.png" alt="Alt text"><br>   3、屏幕像素密度：简称ppi,单位是dpi，ppi越高图像会更加清晰<br><img src="/assets/img/dpi.png" alt="Alt text"><br>对角线分辨率除以屏幕尺寸：2203/5≈440dpi</p>
+<h3 id="设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，"><a href="#设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，" class="headerlink" title="设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，"></a>设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，</h3><p>不可能再一个设备像素对应一个设备独立像素了，因为这样东西会被缩小，看不清，现在的高分辨率屏幕会用多个设备像素来显示一个设备独立像素。<br>一台设备上的设备独立像素和设备像素一样，都是固定的。设备中有相关系统把设备独立像素或者CSS像素转化为物理像素。<br>可通过window.screen.width、　window.screen.height 获取设备对像素，例如iphone6 的设备独立像素为 375*667</p>
+<h3 id="设备像素比（DPR）：物理像素-设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上）-例如iphone6-的DPR为2"><a href="#设备像素比（DPR）：物理像素-设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上）-例如iphone6-的DPR为2" class="headerlink" title="设备像素比（DPR）：物理像素/设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上） 例如iphone6 的DPR为2"></a>设备像素比（DPR）：物理像素/设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上） 例如iphone6 的DPR为2</h3><h3 id="CSS像素：相对单位，相对不同屏幕，其实际像素不同"><a href="#CSS像素：相对单位，相对不同屏幕，其实际像素不同" class="headerlink" title="CSS像素：相对单位，相对不同屏幕，其实际像素不同"></a>CSS像素：相对单位，相对不同屏幕，其实际像素不同</h3><h3 id="viewport-是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。"><a href="#viewport-是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。" class="headerlink" title="viewport : 是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。"></a>viewport : 是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。</h3><p>一般来说PC端端viewport跟浏览器的大小是一致的，移动端的viewport 宽度大多都是980px，可见移动端的viewport比真实的移动端屏幕大多了。<br>让一个设备独立像素点对应一个CSS像素点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span><br></pre></td></tr></table></figure></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://llinaa.github.io/uncategorized/cjpj5r1vo000k1nt47m0vrnc2.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/uncategorized/cjpj5r1vz000t1nt4spq5tn66.html" class="archive-article-date">
-  	<time datetime="2018-12-11T02:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/uncategorized/cjpj5r1vz000t1nt4spq5tn66.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小程序入门</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/uncategorized/cjpj5r1vz000t1nt4spq5tn66.html">小程序入门</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -249,8 +339,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

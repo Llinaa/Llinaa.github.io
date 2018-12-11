@@ -159,6 +159,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-设备像素、独立像素和css像素" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/uncategorized/cjpj5r1vo000k1nt47m0vrnc2.html">设备像素、独立像素和css像素</a>
+    </h1>
+  
+
+        
+        <a href="/uncategorized/cjpj5r1vo000k1nt47m0vrnc2.html" class="archive-article-date">
+  	<time datetime="2018-12-11T02:57:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在做一些移动端的东西，对设备像素、独立像素和css 像素做了简单了解：</p>
+<h3 id="1、像素"><a href="#1、像素" class="headerlink" title="1、像素"></a>1、像素</h3><pre><code>（1）设备像素
+（2）设备独立像素
+（3）CSS像素
+</code></pre><h3 id="设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位"><a href="#设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位" class="headerlink" title="设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位"></a>设备像素：又称物理像素，表示设备的真实像素，设备的固有属性，设备能控制显示的最小单位</h3><p>   1、分辨率：通常使用分辨率来描述设备像素，例如1920<em>1080，表示设备横向有1920像素点，纵向有1080个像素点。例如iphone6 的设备独立像素为 1334</em>750<br>   2、屏幕尺寸：购买电视或者手机等设备的显示器都有一个屏幕尺寸参数，比如55英寸，它既不是显示器的宽度也不是高度，而是对角线的长度，图示如下：<br><img src="/assets/img/ppi.png" alt="Alt text"><br>   3、屏幕像素密度：简称ppi,单位是dpi，ppi越高图像会更加清晰<br><img src="/assets/img/dpi.png" alt="Alt text"><br>对角线分辨率除以屏幕尺寸：2203/5≈440dpi</p>
+<h3 id="设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，"><a href="#设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，" class="headerlink" title="设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，"></a>设备独立像素：一台设备上程序用来描述数据的一个个的”点”，也就是虚拟的像素，以前设备像素对应一个设备独立像素，但随着高分辨率的手机，</h3><p>不可能再一个设备像素对应一个设备独立像素了，因为这样东西会被缩小，看不清，现在的高分辨率屏幕会用多个设备像素来显示一个设备独立像素。<br>一台设备上的设备独立像素和设备像素一样，都是固定的。设备中有相关系统把设备独立像素或者CSS像素转化为物理像素。<br>可通过window.screen.width、　window.screen.height 获取设备对像素，例如iphone6 的设备独立像素为 375*667</p>
+<h3 id="设备像素比（DPR）：物理像素-设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上）-例如iphone6-的DPR为2"><a href="#设备像素比（DPR）：物理像素-设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上）-例如iphone6-的DPR为2" class="headerlink" title="设备像素比（DPR）：物理像素/设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上） 例如iphone6 的DPR为2"></a>设备像素比（DPR）：物理像素/设备独立像素，也就是一个虚拟像素对应多少个物理像素。（横坐标轴上或纵坐标轴上） 例如iphone6 的DPR为2</h3><h3 id="CSS像素：相对单位，相对不同屏幕，其实际像素不同"><a href="#CSS像素：相对单位，相对不同屏幕，其实际像素不同" class="headerlink" title="CSS像素：相对单位，相对不同屏幕，其实际像素不同"></a>CSS像素：相对单位，相对不同屏幕，其实际像素不同</h3><h3 id="viewport-是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。"><a href="#viewport-是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。" class="headerlink" title="viewport : 是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。"></a>viewport : 是一块区域，浏览器根据这个区域来计算宽度是百分比的元素的宽度。描绘图案。</h3><p>一般来说PC端端viewport跟浏览器的大小是一致的，移动端的viewport 宽度大多都是980px，可见移动端的viewport比真实的移动端屏幕大多了。<br>让一个设备独立像素点对应一个CSS像素点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/uncategorized/cjpj5r1vo000k1nt47m0vrnc2.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-小程序入门" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -166,12 +235,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/uncategorized/cjpj5294g000qvgt4du96snkc.html">小程序入门</a>
+      <a class="article-title" href="/uncategorized/cjpj5r1vz000t1nt4spq5tn66.html">小程序入门</a>
     </h1>
   
 
         
-        <a href="/uncategorized/cjpj5294g000qvgt4du96snkc.html" class="archive-article-date">
+        <a href="/uncategorized/cjpj5r1vz000t1nt4spq5tn66.html" class="archive-article-date">
   	<time datetime="2018-12-11T02:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
 </a>
         
@@ -191,7 +260,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/uncategorized/cjpj5294g000qvgt4du96snkc.html">展开全文 >></a>
+          <a class="article-more-a" href="/uncategorized/cjpj5r1vz000t1nt4spq5tn66.html">展开全文 >></a>
         </p>
       
 
@@ -228,12 +297,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/notes/cjpj5293y0006vgt4cnxgyqr9.html">Web Components</a>
+      <a class="article-title" href="/notes/cjpj5r1vi000a1nt4618w6mlo.html">Web Components</a>
     </h1>
   
 
         
-        <a href="/notes/cjpj5293y0006vgt4cnxgyqr9.html" class="archive-article-date">
+        <a href="/notes/cjpj5r1vi000a1nt4618w6mlo.html" class="archive-article-date">
   	<time datetime="2018-11-15T12:36:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-15</time>
 </a>
         
@@ -278,7 +347,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/notes/cjpj5293y0006vgt4cnxgyqr9.html">展开全文 >></a>
+          <a class="article-more-a" href="/notes/cjpj5r1vi000a1nt4618w6mlo.html">展开全文 >></a>
         </p>
       
 
@@ -315,12 +384,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/notes/cjpj52947000hvgt4jz6kcvox.html">react setState</a>
+      <a class="article-title" href="/notes/cjpj5r1vx000q1nt4d8rxsv33.html">react setState</a>
     </h1>
   
 
         
-        <a href="/notes/cjpj52947000hvgt4jz6kcvox.html" class="archive-article-date">
+        <a href="/notes/cjpj5r1vx000q1nt4d8rxsv33.html" class="archive-article-date">
   	<time datetime="2018-11-09T07:51:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-09</time>
 </a>
         
@@ -363,7 +432,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/notes/cjpj52947000hvgt4jz6kcvox.html">展开全文 >></a>
+          <a class="article-more-a" href="/notes/cjpj5r1vx000q1nt4d8rxsv33.html">展开全文 >></a>
         </p>
       
 
@@ -400,12 +469,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/notes/cjpj5294d000nvgt49h7weuqg.html">响应式设计</a>
+      <a class="article-title" href="/notes/cjpj5r1vm000h1nt4yzceug7y.html">响应式设计</a>
     </h1>
   
 
         
-        <a href="/notes/cjpj5294d000nvgt49h7weuqg.html" class="archive-article-date">
+        <a href="/notes/cjpj5r1vm000h1nt4yzceug7y.html" class="archive-article-date">
   	<time datetime="2018-09-26T12:35:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-26</time>
 </a>
         
@@ -488,91 +557,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/notes/cjpj5294d000nvgt49h7weuqg.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Emscripten编译器安装教程" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/notes/cjpj5293p0001vgt472fy2f7q.html">Emscripten编译器安装教程</a>
-    </h1>
-  
-
-        
-        <a href="/notes/cjpj5293p0001vgt472fy2f7q.html" class="archive-article-date">
-  	<time datetime="2018-08-30T03:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/notes/cjpj5293p0001vgt472fy2f7q.html">展开全文 >></a>
+          <a class="article-more-a" href="/notes/cjpj5r1vm000h1nt4yzceug7y.html">展开全文 >></a>
         </p>
       
 

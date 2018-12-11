@@ -159,6 +159,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-‘简单实现node-Events模块" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/uncategorized/cjpj5r1vk000c1nt4wirm8e5i.html">简单实现node Events模块</a>
+    </h1>
+  
+
+        
+        <a href="/uncategorized/cjpj5r1vk000c1nt4wirm8e5i.html" class="archive-article-date">
+  	<time datetime="2018-08-20T03:15:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>观察者模式定义对象间的一种一对多依赖关系，使得当每一个被依赖对象状态发生改变时，其相关依赖对象都得到通知并自动更新, node中的Events模块就是通过观察者模式来实现的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var events = require(&apos;events&apos;);</span><br><span class="line">var eventEventEmitter = new events.EventEmitter();</span><br><span class="line">eventEventEmitter.on(&apos;hello&apos;,function(name)&#123;</span><br><span class="line">	console.log(&apos;hello&apos;,name);</span><br><span class="line">&#125;)</span><br><span class="line">eventEventEmitter.emit(&apos;hello&apos;,&apos;linaa&apos;);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="实现简单的Event模块的emit和on方法"><a href="#实现简单的Event模块的emit和on方法" class="headerlink" title="实现简单的Event模块的emit和on方法"></a>实现简单的Event模块的emit和on方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function Events() &#123;</span><br><span class="line">	this.on = function(eventName,callBack) &#123;</span><br><span class="line">		if(!this.handles) &#123;</span><br><span class="line">			this.handles = &#123;&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if(!this.handles[eventName]) &#123;</span><br><span class="line">			this.handles[eventName]=[];</span><br><span class="line">		&#125;</span><br><span class="line">		this.handles[eventName].push(callBack)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	this.emit = function(eventName,obj)&#123;</span><br><span class="line">		if(this.handles[eventName]) &#123;</span><br><span class="line">			for(var i = 0;i&lt;this.handles[eventName].length;i++)&#123;</span><br><span class="line">				this.handles[eventName][i](obj);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>###调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var events=new Events();</span><br><span class="line"> events.on(&apos;hello&apos;,function(name)&#123;</span><br><span class="line">    console.log(&apos;Hello&apos;,name)</span><br><span class="line"> &#125;);</span><br><span class="line"> events.emit(&apos;hello&apos;,&apos;linaa&apos;);</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/uncategorized/cjpj5r1vk000c1nt4wirm8e5i.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JavaScript-1-2-3-map-parseInt-问题解析" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -166,12 +244,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/notes/cjpj5293k0000vgt4ij2l4hv5.html">JavaScript:[1,2,3].map(parseInt)问题解析</a>
+      <a class="article-title" href="/notes/cjpj5r1v900041nt468owtfak.html">JavaScript:[1,2,3].map(parseInt)问题解析</a>
     </h1>
   
 
         
-        <a href="/notes/cjpj5293k0000vgt4ij2l4hv5.html" class="archive-article-date">
+        <a href="/notes/cjpj5r1v900041nt468owtfak.html" class="archive-article-date">
   	<time datetime="2018-08-15T08:24:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
 </a>
         
@@ -229,7 +307,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/notes/cjpj5293k0000vgt4ij2l4hv5.html">展开全文 >></a>
+          <a class="article-more-a" href="/notes/cjpj5r1v900041nt468owtfak.html">展开全文 >></a>
         </p>
       
 
