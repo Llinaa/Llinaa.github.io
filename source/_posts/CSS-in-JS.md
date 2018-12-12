@@ -2,6 +2,8 @@
 title: CSS in JS
 date: 2018-12-11 17:14:48
 tags:
+
+
 ---
 ****
 ### CSS in JS，顾名思义，就是在JavaScript 里面写CSS
@@ -15,3 +17,10 @@ tags:
 2、BEM (.block__element--modifier)：比较流行的class命名规则，部分解决了命名混乱和全局污染的问题，但class定义起来还是不太方便，比较冗长，而且和第三方库的命名还是有可能冲突。
 3、
 CSS Modules：模块化CSS，将CSS文件以模块的形式引入到JavaScript里，基本上解决了全局污染、命名混乱、样式重用和冗余的问题，但CSS有嵌套结构的限制（只能一层），也无法方便的在CSS和JavaScript之间共享变量。
+CSS-in-JS: 1、在组件层面对CSS进行了抽象
+           2、选择器作用域：JSS 在将 JSON 编译成 CSS 时会自动生成唯一的类名
+           3、浏览器引擎前缀：CSS 规则自动添加了浏览器引擎前缀。
+           4、代码共享：在 JS 和 CSS 之间共享常量和函数。
+第三方：react-jss
+
+           
