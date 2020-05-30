@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   
-  <title>标签: CSS | lina&#39;s blog</title>
+  <title>Web Components | lina&#39;s blog</title>
 
   
     <link rel="apple-touch-icon" href="/images/favicon.ico">
@@ -73,43 +73,93 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>CSS</span>
-    </h2>
+
+
+
+
+
+
+
+
+
+<!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+<div class="container post-details" id="post-details">
+  <div class="post-content">
+    <div class="post-title">Web Components</div>
+    <div class="post-attach">
+      <span class="post-pubtime">2018-11-15</span>
+      <span class="post-tags">
+        
+          <i class="iconfont icon-tags"></i>
+          
+          <span class="span--tag">
+            <a href="/tags/note/">
+              #note
+            </a>
+          </span>
+          
+        
+      </span>
+    </div>
+    <div class="markdown-body">
+      <p>Web Components 网页组件式开发的技术规范</p>
+<p>###优点：<br>1、管理和使用非常容易，加载或卸载组件，只要删除或添加一行代码；<br>2、定制容易<br>3、模块化编程</p>
+<p>###包含的技术：<br>1、Template<br>2、Custom Element<br>3、Shadow DOM<br>4、HTML Import</p>
+
+    </div>
+    
+      <div class="prev-or-next">
+        <div class="post-foot-next">
+          
+            <a href="/notes/ckatj1fri000jhkt4dxhcm230.html" target="_self">
+              <i class="iconfont icon-chevronleft"></i>
+              <span>PREV</span>
+            </a>
+          
+        </div>
+        <div class="post-attach">
+          <span class="post-pubtime">2018-11-15</span>
+          <span class="post-tags">
+            
+              <i class="iconfont icon-tags"></i>
+              
+              <span class="span--tag">
+                <a href="/tags/note/">
+                  #note
+                </a>
+              </span>
+              
+            
+          </span>
+        </div>
+        <div class="post-foot-prev">
+          
+            <a href="/CSS/ckatj1fsd001ghkt4hey8syiu.html" target="_self">
+              <span>NEXT</span>
+              <i class="iconfont icon-chevronright"></i>
+            </a>
+          
+        </div>
+      </div>
+    
   </div>
   
-    <div class="post-list">
-      <div class="post-item" title="css选择器">
-        <span class="time-m-d">2020-05-23</span>
-        <a href="/CSS/ckatj1frn000rhkt4cnjqpzlk.html">
-          <span>css选择器</span>
-        </a>
-      </div>
-    </div>
+
   
-    <div class="post-list">
-      <div class="post-item" title="设备像素、独立像素和css像素">
-        <span class="time-m-d">2018-12-11</span>
-        <a href="/CSS/ckatj1fsd001ghkt4hey8syiu.html">
-          <span>设备像素、独立像素和css像素</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="响应式设计">
-        <span class="time-m-d">2018-09-26</span>
-        <a href="/CSS/ckatj1frq000zhkt4s6dekqfg.html">
-          <span>响应式设计</span>
-        </a>
-      </div>
+    <div class="comments-container">
+      
+
+
+
+
+
     </div>
   
 </div>
+
 
         <div class="footer">
   <div class="social">
