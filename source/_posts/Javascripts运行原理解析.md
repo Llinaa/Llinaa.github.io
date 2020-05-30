@@ -1,10 +1,9 @@
 ---
 title: Javascripts运行原理解析
 categories:
-  - notes
+- JS
 tags:
-  - note
-toc: true
+- JS
 date: 2018-08-29 14:16:44
 ---
 

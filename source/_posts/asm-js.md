@@ -1,9 +1,9 @@
 ---
 title: asm.js
 categories:
-  - notes
+- JS
 tags:
-  - note
+- JS
 toc: true
 date: 2018-08-30 10:34:33
 ---

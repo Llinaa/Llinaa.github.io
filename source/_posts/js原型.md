@@ -1,10 +1,9 @@
 ---
 title: js原型
 categories:
-  - notes
+- JS
 tags:
-  - note
-toc: true
+- JS
 date: 2018-08-21 09:52:37
 ---
 

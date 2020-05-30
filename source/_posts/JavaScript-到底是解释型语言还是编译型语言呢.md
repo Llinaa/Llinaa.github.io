@@ -1,9 +1,8 @@
 ---
 title: JavaScript 到底是解释型语言还是编译型语言呢
 categories:
-  - notes
+- JS
 tags:
-  - note
-toc: true
+- JS
 date: 2018-08-30 10:49:01
 ---

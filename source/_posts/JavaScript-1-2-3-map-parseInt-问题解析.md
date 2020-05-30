@@ -1,10 +1,9 @@
 ---
 title: 'JavaScript:[1,2,3].map(parseInt)问题解析'
 categories:
-  - notes
+- JS
 tags:
-  - note
-toc: true
+- JS
 date: 2018-08-15 16:24:36
 ---
 ###### 猜猜答案是什么呢
