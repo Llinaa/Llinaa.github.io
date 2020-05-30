@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="author" content="zchengsite, 1451426471@qq.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <title>CSS in JS | lina&#39;s blog</title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <script src="/js/fancybox.js"></script>
+
+  
+
+  
+
+  
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/"><img src="/images/34339465.jpg" alt=""></a>
+    <div class="nickname"><a href="/">Oranges</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">主页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+<script src="/js/activeNav.js"></script>
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+
+
+
+
+
+
+
+
+<!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+<div class="container post-details" id="post-details">
+  <div class="post-content">
+    <div class="post-title">CSS in JS</div>
+    <div class="post-attach">
+      <span class="post-pubtime">2018-12-11</span>
+      <span class="post-tags">
+        
+      </span>
+    </div>
+    <div class="markdown-body">
+      <hr>
+<h3 id="CSS-in-JS，顾名思义，就是在JavaScript-里面写CSS"><a href="#CSS-in-JS，顾名思义，就是在JavaScript-里面写CSS" class="headerlink" title="CSS in JS，顾名思义，就是在JavaScript 里面写CSS"></a>CSS in JS，顾名思义，就是在JavaScript 里面写CSS</h3><p>以前CSS的缺点：<br>1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。<br>2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。<br>3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为怕互相影响，不敢重用。<br>4、代码冗余：由于样式重用的困难性等问题，导致代码冗余。<br>出现的解决方案：<br>1、SASS, LESS - 提供了变量、简单函数、运算、继承等，扩展性、重用性都有了很大的提升，解决了一些样式重用冗余的问题，但是对于命名混乱问题的效果不大。<br>2、BEM (.block__element–modifier)：比较流行的class命名规则，部分解决了命名混乱和全局污染的问题，但class定义起来还是不太方便，比较冗长，而且和第三方库的命名还是有可能冲突。<br>3、<br>CSS Modules：模块化CSS，将CSS文件以模块的形式引入到JavaScript里，基本上解决了全局污染、命名混乱、样式重用和冗余的问题，但CSS有嵌套结构的限制（只能一层），也无法方便的在CSS和JavaScript之间共享变量。<br>CSS-in-JS: 1、在组件层面对CSS进行了抽象<br>           2、选择器作用域：JSS 在将 JSON 编译成 CSS 时会自动生成唯一的类名<br>           3、浏览器引擎前缀：CSS 规则自动添加了浏览器引擎前缀。<br>           4、代码共享：在 JS 和 CSS 之间共享常量和函数。<br>第三方：react-jss</p>
+
+    </div>
+    
+      <div class="prev-or-next">
+        <div class="post-foot-next">
+          
+            <a href="/CSS/ckathonhh00120jt4di99onc4.html" target="_self">
+              <i class="iconfont icon-chevronleft"></i>
+              <span>PREV</span>
+            </a>
+          
+        </div>
+        <div class="post-attach">
+          <span class="post-pubtime">2018-12-11</span>
+          <span class="post-tags">
+            
+          </span>
+        </div>
+        <div class="post-foot-prev">
+          
+            <a href="/uncategorized/ckathongg00000jt4js2hjg7i.html" target="_self">
+              <span>NEXT</span>
+              <i class="iconfont icon-chevronright"></i>
+            </a>
+          
+        </div>
+      </div>
+    
+  </div>
+  
+  <div class="post-catalog" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-in-JS，顾名思义，就是在JavaScript-里面写CSS"><span class="toc-text">CSS in JS，顾名思义，就是在JavaScript 里面写CSS</span></a></li></ol>
+    </div>
+  </div>
+
+  <script src="/js/catalog.js"></script>
+
+
+
+  
+    <div class="comments-container">
+      
+
+
+
+
+
+    </div>
+  
+</div>
+
+
+        <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" href="https://github.com/Llinaa">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="email" href="1127650897@qq.com">
+            <i class="iconfont icon-envelope"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      <a href="">Copyright © Oranges 2020</a>
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+<script src="/js/backtotop.js"></script>
+
+
+    </div>
+  </body>
+</html>
