@@ -20,31 +20,33 @@
     var CONFIG = {"hostname":"llinaa.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lina&#39;s blog">
-<meta property="og:url" content="https://llinaa.github.io/page/2/index.html">
+  <meta name="description" content="三种技术：弹性布局、弹性图片、媒体查询 浏览器支持：先写一个较轻量的代码架构，然后根据所需的体验针对能力更强的浏览器进行扩展，包括视觉和功能（渐进增强） 浏览器特性查询：https://caniuse.com  视口：浏览器中用于呈现网页的区域，视口通常并不等于屏幕大小，特别是可以缩放浏览器窗口的情况下。1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;q">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="响应式设计">
+<meta property="og:url" content="https://llinaa.github.io/CSS/ckatjrsne000trpt4sxbptkcx.html">
 <meta property="og:site_name" content="lina&#39;s blog">
-<meta property="og:description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
+<meta property="og:description" content="三种技术：弹性布局、弹性图片、媒体查询 浏览器支持：先写一个较轻量的代码架构，然后根据所需的体验针对能力更强的浏览器进行扩展，包括视觉和功能（渐进增强） 浏览器特性查询：https://caniuse.com  视口：浏览器中用于呈现网页的区域，视口通常并不等于屏幕大小，特别是可以缩放浏览器窗口的情况下。1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;q">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-30T10:37:43.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lina&#39;s blog">
-<meta name="twitter:description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
+<meta name="twitter:title" content="响应式设计">
+<meta name="twitter:description" content="三种技术：弹性布局、弹性图片、媒体查询 浏览器支持：先写一个较轻量的代码架构，然后根据所需的体验针对能力更强的浏览器进行扩展，包括视觉和功能（渐进增强） 浏览器特性查询：https://caniuse.com  视口：浏览器中用于呈现网页的区域，视口通常并不等于屏幕大小，特别是可以缩放浏览器窗口的情况下。1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;q">
 
-<link rel="canonical" href="https://llinaa.github.io/page/2/">
+<link rel="canonical" href="https://llinaa.github.io/CSS/ckatjrsne000trpt4sxbptkcx.html">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>lina's blog</title>
+  <title>响应式设计 | lina's blog</title>
   
 
 
@@ -148,159 +150,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://llinaa.github.io/notes/ckatjrsna000lrpt4uhqfs0v9.html">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lina">
-      <meta itemprop="description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lina's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/notes/ckatjrsna000lrpt4uhqfs0v9.html" class="post-title-link" itemprop="url">Web Components</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-11-15 20:36:13" itemprop="dateCreated datePublished" datetime="2018-11-15T20:36:13+08:00">2018-11-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 18:34:58" itemprop="dateModified" datetime="2020-05-30T18:34:58+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/notes/" itemprop="url" rel="index"><span itemprop="name">notes</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Web Components 网页组件式开发的技术规范</p>
-<p>###优点：<br>1、管理和使用非常容易，加载或卸载组件，只要删除或添加一行代码；<br>2、定制容易<br>3、模块化编程</p>
-<p>###包含的技术：<br>1、Template<br>2、Custom Element<br>3、Shadow DOM<br>4、HTML Import</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://llinaa.github.io/notes/ckatjrsnd000qrpt4tdpq396d.html">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lina">
-      <meta itemprop="description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lina's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/notes/ckatjrsnd000qrpt4tdpq396d.html" class="post-title-link" itemprop="url">react setState</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-11-09 15:51:35" itemprop="dateCreated datePublished" datetime="2018-11-09T15:51:35+08:00">2018-11-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 18:34:58" itemprop="dateModified" datetime="2020-05-30T18:34:58+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/notes/" itemprop="url" rel="index"><span itemprop="name">notes</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>###虚拟dom &amp; diff算法<br><img src="/assets/img/event_loop.jpg" alt="Alt text"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -316,10 +169,9 @@
       <meta itemprop="name" content="lina's blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/CSS/ckatjrsne000trpt4sxbptkcx.html" class="post-title-link" itemprop="url">响应式设计</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          响应式设计
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -358,7 +210,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
+        <ul>
 <li>三种技术：弹性布局、弹性图片、媒体查询</li>
 <li>浏览器支持：先写一个较轻量的代码架构，然后根据所需的体验针对能力更强的浏览器进行扩展，包括视觉和功能（渐进增强）</li>
 <li>浏览器特性查询：<a href="https://caniuse.com" target="_blank" rel="noopener">https://caniuse.com</a></li>
@@ -396,171 +248,37 @@
 </ul>
 <h3 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a>CSS3新特性</h3><p>CSS响应式多列布局：<br>img {<br>    column-width<br>    column-count<br>    column-gap<br>    column-rule<br>}<br>断字：<br>word-wrap:break-word<br>截断文本：<br>white-space：no-wrap</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"># CSS</a>
+          </div>
 
-      
-  
-  
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://llinaa.github.io/notes/ckatjrsm70002rpt40pwuis2v.html">
+        
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lina">
-      <meta itemprop="description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lina's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/notes/ckatjrsm70002rpt40pwuis2v.html" class="post-title-link" itemprop="url">Emscripten编译器安装教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-08-30 11:15:11" itemprop="dateCreated datePublished" datetime="2018-08-30T11:15:11+08:00">2018-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2018-12-11 12:01:19" itemprop="dateModified" datetime="2018-12-11T12:01:19+08:00">2018-12-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/notes/" itemprop="url" rel="index"><span itemprop="name">notes</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/notes/ckatjrsm70002rpt40pwuis2v.html" rel="prev" title="Emscripten编译器安装教程">
+      <i class="fa fa-chevron-left"></i> Emscripten编译器安装教程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/notes/ckatjrsnd000qrpt4tdpq396d.html" rel="next" title="react setState">
+      react setState <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://llinaa.github.io/JS/ckatjrsmk0008rpt47jkvwa75.html">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lina">
-      <meta itemprop="description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lina's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/JS/ckatjrsmk0008rpt47jkvwa75.html" class="post-title-link" itemprop="url">JavaScript 到底是解释型语言还是编译型语言呢</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-08-30 10:49:01" itemprop="dateCreated datePublished" datetime="2018-08-30T10:49:01+08:00">2018-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 18:37:18" itemprop="dateModified" datetime="2020-05-30T18:37:18+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS/" itemprop="url" rel="index"><span itemprop="name">JS</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
@@ -612,6 +330,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#媒体查询："><span class="nav-number">1.</span> <span class="nav-text">媒体查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#css"><span class="nav-number">1.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#媒体查询可以测试的特性："><span class="nav-number">2.</span> <span class="nav-text">媒体查询可以测试的特性：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#弹性布局与响应式图片"><span class="nav-number">3.</span> <span class="nav-text">弹性布局与响应式图片</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#容器："><span class="nav-number">3.0.0.1.</span> <span class="nav-text">容器：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#元素"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">元素</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5与响应式Web设计"><span class="nav-number">4.</span> <span class="nav-text">HTML5与响应式Web设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3新特性"><span class="nav-number">5.</span> <span class="nav-text">CSS3新特性</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
