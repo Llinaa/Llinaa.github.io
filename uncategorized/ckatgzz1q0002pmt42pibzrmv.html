@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://llinaa.github.io">
-  <title>Archives: 2018/8 | lina&#39;s blog</title>
+  <title>CSS Modules | lina&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lina&#39;s blog">
-<meta property="og:url" content="https://llinaa.github.io/archives/2018/08/index.html">
+  <meta name="description" content="什么是CSS Modules？所有的class的名称和动画的名称默认属于本地作用域的CSS文件。所以CSS Modules不是一个官方的规范，也不是浏览器的一种机制，它是一种构建步骤中对CSS类名选择器限定作用域的一种方式构建通常需要webpack或者browserify的帮助）。通过构建工具的帮助，可以将class的名字或者选择器的名字作用域化。（类似命名空间化。）不是将CSS改造成编程语言，只">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Modules">
+<meta property="og:url" content="https://llinaa.github.io/uncategorized/ckatgzz1q0002pmt42pibzrmv.html">
 <meta property="og:site_name" content="lina&#39;s blog">
-<meta property="og:description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
+<meta property="og:description" content="什么是CSS Modules？所有的class的名称和动画的名称默认属于本地作用域的CSS文件。所以CSS Modules不是一个官方的规范，也不是浏览器的一种机制，它是一种构建步骤中对CSS类名选择器限定作用域的一种方式构建通常需要webpack或者browserify的帮助）。通过构建工具的帮助，可以将class的名字或者选择器的名字作用域化。（类似命名空间化。）不是将CSS改造成编程语言，只">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-11T10:05:55.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lina&#39;s blog">
-<meta name="twitter:description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
+<meta name="twitter:title" content="CSS Modules">
+<meta name="twitter:description" content="什么是CSS Modules？所有的class的名称和动画的名称默认属于本地作用域的CSS文件。所以CSS Modules不是一个官方的规范，也不是浏览器的一种机制，它是一种构建步骤中对CSS类名选择器限定作用域的一种方式构建通常需要webpack或者browserify的帮助）。通过构建工具的帮助，可以将class的名字或者选择器的名字作用域化。（类似命名空间化。）不是将CSS改造成编程语言，只">
   
     <link rel="alternative" href="/atom.xml" title="lina&#39;s blog" type="application/atom+xml">
   
@@ -163,270 +164,174 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS-Modules" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS Modules
+    </h1>
+  
+
+        
+        <a href="/uncategorized/ckatgzz1q0002pmt42pibzrmv.html" class="archive-article-date">
+  	<time datetime="2018-12-11T09:29:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是CSS-Modules？"><a href="#什么是CSS-Modules？" class="headerlink" title="什么是CSS Modules？"></a>什么是CSS Modules？</h3><p>所有的class的名称和动画的名称默认属于本地作用域的CSS文件。<br>所以CSS Modules不是一个官方的规范，也不是浏览器的一种机制，它是一种构建步骤中对CSS类名选择器限定作用域的一种方式<br>构建通常需要webpack或者browserify的帮助）。通过构建工具的帮助，可以将class的名字或者选择器的名字作用域化。（类似命名空间化。）<br>不是将CSS改造成编程语言，只是加入了局部作用域和模块依赖，解决CSS中的全局作用域问题，确保样式服务于单个组件</p>
+<h3 id="1、局部作用域"><a href="#1、局部作用域" class="headerlink" title="1、局部作用域"></a>1、局部作用域</h3><p>CSS的规则都是全剧的，任何一个组件的样式规则，都对整个页面生效，产生布局作用域的唯一方法，就是使用就是使用一个独一无二的class的名字，不会与其他选择器重名。这就是 CSS Modules 的做法。<br>下面是一个React 组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;</span><br><span class="line">import style from &apos;./App.css&apos;;</span><br><span class="line"></span><br><span class="line">export default () =&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;h1 className=&#123;style.title&#125;&gt;</span><br><span class="line">      Hello World</span><br><span class="line">    &lt;/h1&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>CSS 文件，最终构建工具将类名style.title编译成一个哈希字符串，App.css也会同时被编译。这个类名就变成独一无二了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.title &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>CSS Modules 提供各种插件（Webpack-css-loader、Browserify-css-modulesify等），支持不同的构建工具。例如Webpack 的css-loader插件</p>
+<h3 id="2、全局作用域"><a href="#2、全局作用域" class="headerlink" title="2、全局作用域"></a>2、全局作用域</h3><p>CSS Modules 允许使用:global(.className)的语法，声明一个全局规则。凡是这样声明的class，都不会被编译成哈希字符串。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.title &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">:global(.title) &#123;</span><br><span class="line">  color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;</span><br><span class="line">import styles from &apos;./App.css&apos;;</span><br><span class="line"></span><br><span class="line">export default () =&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;h1 className=&quot;title&quot;&gt;     //使用普通的class的写法，就会引用全局class</span><br><span class="line">      Hello World</span><br><span class="line">    &lt;/h1&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="3、定制哈希类名"><a href="#3、定制哈希类名" class="headerlink" title="3、定制哈希类名"></a>3、定制哈希类名</h3><p>css-loader默认的哈希算法是[hash:base64]，这会将.title编译成._3zyde4l1yATCOkgn-DBWEL这样的字符串。<br>webpack.config.js里面可以定制哈希字符串的格式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">  loaders: [</span><br><span class="line">    // ...</span><br><span class="line">    &#123;</span><br><span class="line">      test: /\.css$/,</span><br><span class="line">      loader: &quot;style-loader!css-loader?modules&amp;localIdentName=[path][name]---[local]---[hash:base64:5]&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4、Class-的组合"><a href="#4、Class-的组合" class="headerlink" title="4、Class 的组合"></a>4、Class 的组合</h3><p>在 CSS Modules 中，一个选择器可以继承另一个选择器的规则，这称为”组合”（”composition”）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.className &#123;</span><br><span class="line">  background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.title &#123;</span><br><span class="line">  composes: className;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="5、输入其他模块，选择器也可以继承其他CSS文件里面的规则。"><a href="#5、输入其他模块，选择器也可以继承其他CSS文件里面的规则。" class="headerlink" title="5、输入其他模块，选择器也可以继承其他CSS文件里面的规则。"></a>5、输入其他模块，选择器也可以继承其他CSS文件里面的规则。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">another.css</span><br><span class="line">.className &#123;</span><br><span class="line">  background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line">App.css可以继承another.css里面的规则</span><br><span class="line">.title &#123;</span><br><span class="line">  composes: className from &apos;./another.css&apos;;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6、输入变量"><a href="#6、输入变量" class="headerlink" title="6、输入变量"></a>6、输入变量</h3><p>CSS Modules 支持使用变量，不过需要安装 PostCSS 和 postcss-modules-values<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">var values = require(&apos;postcss-modules-values&apos;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  entry: __dirname + &apos;/index.js&apos;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    publicPath: &apos;/&apos;,</span><br><span class="line">    filename: &apos;./bundle.js&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  module: &#123;</span><br><span class="line">    loaders: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.jsx?$/,</span><br><span class="line">        exclude: /node_modules/,</span><br><span class="line">        loader: &apos;babel&apos;,</span><br><span class="line">        query: &#123;</span><br><span class="line">          presets: [&apos;es2015&apos;, &apos;stage-0&apos;, &apos;react&apos;]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.css$/,</span><br><span class="line">        loader: &quot;style-loader!css-loader?modules!postcss-loader&quot;    //加入postcss-loader</span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  postcss: [</span><br><span class="line">    values</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">colors.css</span><br><span class="line">@value blue: #0c77f8;</span><br><span class="line">@value red: #ff0000;</span><br><span class="line">@value green: #aaf200;</span><br><span class="line"></span><br><span class="line">App.css</span><br><span class="line">@value colors: &quot;./colors.css&quot;;</span><br><span class="line">@value blue, red, green from colors;</span><br><span class="line">.title &#123;</span><br><span class="line">  color: red;</span><br><span class="line">  background-color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz1t0004pmt4e5pijmfs.html" class="archive-article-date">
-  	<time datetime="2018-08-30T03:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz1t0004pmt4e5pijmfs.html">Emscripten编译器安装教程</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://llinaa.github.io/uncategorized/ckatgzz1q0002pmt42pibzrmv.html" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz200008pmt4r9s9l99z.html" class="archive-article-date">
-  	<time datetime="2018-08-30T02:49:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/uncategorized/ckatgzz2h000tpmt48773o56n.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          whistle代理工具抓包
+        
+      </div>
+    </a>
+  
+  
+    <a href="/uncategorized/ckatgzz1k0000pmt49t7iotv9.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS in JS</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz200008pmt4r9s9l99z.html">JavaScript 到底是解释型语言还是编译型语言呢</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz29000epmt4sdbgi0ki.html" class="archive-article-date">
-  	<time datetime="2018-08-30T02:34:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz29000epmt4sdbgi0ki.html">asm.js</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz220009pmt45v0bfeev.html" class="archive-article-date">
-  	<time datetime="2018-08-29T06:16:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz220009pmt45v0bfeev.html">Javascripts运行原理解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz2d000lpmt4pzotx09g.html" class="archive-article-date">
-  	<time datetime="2018-08-21T01:52:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz2d000lpmt4pzotx09g.html">js原型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/08/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/08/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -450,8 +355,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

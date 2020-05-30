@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://llinaa.github.io">
-  <title>Archives: 2018/8 | lina&#39;s blog</title>
+  <title>CSS in JS | lina&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lina&#39;s blog">
-<meta property="og:url" content="https://llinaa.github.io/archives/2018/08/index.html">
+  <meta name="description" content="CSS in JS，顾名思义，就是在JavaScript 里面写CSS以前CSS的缺点：1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS in JS">
+<meta property="og:url" content="https://llinaa.github.io/uncategorized/ckatgzz1k0000pmt49t7iotv9.html">
 <meta property="og:site_name" content="lina&#39;s blog">
-<meta property="og:description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
+<meta property="og:description" content="CSS in JS，顾名思义，就是在JavaScript 里面写CSS以前CSS的缺点：1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-11T11:27:10.790Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lina&#39;s blog">
-<meta name="twitter:description" content="前端, javascript, jquery, react, html, html5, css, css3, sass , webpack, 用户体验">
+<meta name="twitter:title" content="CSS in JS">
+<meta name="twitter:description" content="CSS in JS，顾名思义，就是在JavaScript 里面写CSS以前CSS的缺点：1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为">
   
     <link rel="alternative" href="/atom.xml" title="lina&#39;s blog" type="application/atom+xml">
   
@@ -163,270 +164,165 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS-in-JS" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS in JS
+    </h1>
+  
+
+        
+        <a href="/uncategorized/ckatgzz1k0000pmt49t7iotv9.html" class="archive-article-date">
+  	<time datetime="2018-12-11T09:14:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h3 id="CSS-in-JS，顾名思义，就是在JavaScript-里面写CSS"><a href="#CSS-in-JS，顾名思义，就是在JavaScript-里面写CSS" class="headerlink" title="CSS in JS，顾名思义，就是在JavaScript 里面写CSS"></a>CSS in JS，顾名思义，就是在JavaScript 里面写CSS</h3><p>以前CSS的缺点：<br>1、全剧污染：CSS的选择器是全局生效的，所以在class名称比较简单时，容易引起全局选择器冲突，导致样式互相影响。<br>2、命名混乱：因为怕全局污染，所以日常起class名称时会尽量加长，这样不容易重复，但当项目由多人维护时，很容易导致命名风格不统一。<br>3、样式重用困难：有时虽然知道项目上已有一些相似的样式，但因为怕互相影响，不敢重用。<br>4、代码冗余：由于样式重用的困难性等问题，导致代码冗余。<br>出现的解决方案：<br>1、SASS, LESS - 提供了变量、简单函数、运算、继承等，扩展性、重用性都有了很大的提升，解决了一些样式重用冗余的问题，但是对于命名混乱问题的效果不大。<br>2、BEM (.block__element–modifier)：比较流行的class命名规则，部分解决了命名混乱和全局污染的问题，但class定义起来还是不太方便，比较冗长，而且和第三方库的命名还是有可能冲突。<br>3、<br>CSS Modules：模块化CSS，将CSS文件以模块的形式引入到JavaScript里，基本上解决了全局污染、命名混乱、样式重用和冗余的问题，但CSS有嵌套结构的限制（只能一层），也无法方便的在CSS和JavaScript之间共享变量。<br>CSS-in-JS: 1、在组件层面对CSS进行了抽象<br>           2、选择器作用域：JSS 在将 JSON 编译成 CSS 时会自动生成唯一的类名<br>           3、浏览器引擎前缀：CSS 规则自动添加了浏览器引擎前缀。<br>           4、代码共享：在 JS 和 CSS 之间共享常量和函数。<br>第三方：react-jss</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz1t0004pmt4e5pijmfs.html" class="archive-article-date">
-  	<time datetime="2018-08-30T03:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz1t0004pmt4e5pijmfs.html">Emscripten编译器安装教程</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://llinaa.github.io/uncategorized/ckatgzz1k0000pmt49t7iotv9.html" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz200008pmt4r9s9l99z.html" class="archive-article-date">
-  	<time datetime="2018-08-30T02:49:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/uncategorized/ckatgzz1q0002pmt42pibzrmv.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS Modules
+        
+      </div>
+    </a>
+  
+  
+    <a href="/uncategorized/ckatgzz2m0012pmt4gvy7zu6l.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设备像素、独立像素和css像素</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz200008pmt4r9s9l99z.html">JavaScript 到底是解释型语言还是编译型语言呢</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz29000epmt4sdbgi0ki.html" class="archive-article-date">
-  	<time datetime="2018-08-30T02:34:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz29000epmt4sdbgi0ki.html">asm.js</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz220009pmt45v0bfeev.html" class="archive-article-date">
-  	<time datetime="2018-08-29T06:16:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz220009pmt45v0bfeev.html">Javascripts运行原理解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/notes/ckatgzz2d000lpmt4pzotx09g.html" class="archive-article-date">
-  	<time datetime="2018-08-21T01:52:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/notes/ckatgzz2d000lpmt4pzotx09g.html">js原型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/08/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/08/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -450,8 +346,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
